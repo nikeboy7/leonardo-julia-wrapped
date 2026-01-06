@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Leonardo & Julia — Nosso Wrapped</title>
+
+<style>
+:root{
+  --bg:#121212;
+  --card:#1c1c1c;
+  --green:#8fd3a8;
+  --text:#f2f2f2;
+  --muted:#b3b3b3;
+}
+
+*{box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#121212,#181818);
+  color:var(--text);
+}
+
+section{
+  min-height:100vh;
+  padding:60px 24px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.card{
+  background:var(--card);
+  padding:32px;
+  border-radius:24px;
+  max-width:420px;
+  width:100%;
+  box-shadow:0 10px 40px rgba(0,0,0,.4);
+  animation:fadeUp 1s ease;
+}
+
+h1,h2{margin:0 0 12px;}
+h1{font-size:28px;}
+h2{font-size:24px;color:var(--green);}
+p{color:var(--muted);font-size:16px;line-height:1.5;}
+
+.stat{
+  font-size:40px;
+  font-weight:bold;
+  color:var(--green);
+  margin:12px 0;
+}
+
+.list{
+  text-align:left;
+  margin-top:16px;
+}
+.list div{
+  margin:8px 0;
+}
+
+.footer{
+  font-size:14px;
+  color:var(--muted);
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<section>
+  <div class="card">
+    <p>🎧 Retrospectiva</p>
+    <h1>Leonardo & Julia</h1>
+    <p>O relacionamento mais ouvido</p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Dias juntos ❤️</h2>
+    <div class="stat" id="dias">---</div>
+    <p>E contando… porque isso aqui já virou rotina boa 😌</p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Mensagens 💬</h2>
+    <p>Milhares de mensagens trocadas</p>
+    <div class="list">
+      <div>💖 40% amor</div>
+      <div>🥚 30% figurinha do ovo</div>
+      <div>🍽️ 30% “já comeu?”</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Momentos memoráveis 😂</h2>
+    <div class="list">
+      <div>• Perguntar “já comeu?” mesmo sabendo que não</div>
+      <div>• Figurinhas fora de contexto</div>
+      <div>• Conversas sérias que duraram menos que uma risada</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Momentos favoritos 📸</h2>
+    <p>Aqui ficam as fotos que contam nossa história.</p>
+    <p style="font-size:14px;">(você pode trocar este texto por fotos depois)</p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Mensagem final 💚</h2>
+    <p>
+      Julia,<br><br>
+      em <strong>121 dias</strong> você virou minha pessoa favorita,
+      meu lugar seguro e a dona das minhas melhores risadas.<br><br>
+
+      Entre mensagens de amor, figurinhas do ovo 🥚
+      e o clássico “já comeu?”,
+      a gente foi criando algo leve, verdadeiro
+      e completamente nosso.<br><br>
+
+      Obrigado por cada conversa sem sentido,
+      por cada cuidado disfarçado
+      e por estar aqui todos os dias.<br><br>
+
+      Que venham muitos outros capítulos
+      desse relacionamento que já é
+      <strong>Top 1 no meu coração</strong> 💚
+    </p>
+    <p class="footer">Com amor,<br>Leonardo</p>
+  </div>
+</section>
+
+<script>
+const inicio = new Date("2025-09-07");
+const hoje = new Date();
+const diff = hoje - inicio;
+const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+document.getElementById("dias").innerText = dias + " dias";
+</script>
+
+</body>
+</html>
